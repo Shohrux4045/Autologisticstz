@@ -1,7 +1,5 @@
 # Autologisticstz
 
-# News Aggregator
-
 ## Установка
 
 1. Клонируйте репозиторий:
