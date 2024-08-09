@@ -28,5 +28,6 @@
 ## Команды бота
 1.Запустите бота
 bot.py run main
+https://t.me/Autologisticstz_bot
 - `/start`: Приветственное сообщение
 - `/latest`: Получить последние новости
