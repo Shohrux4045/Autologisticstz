@@ -3,11 +3,9 @@ from django.db import transaction
 from bs4 import BeautifulSoup
 import requests
 from news.models import Category, News
-from datetime import datetime
-
+from datetime import datetime, timedelta
 
 class Command(BaseCommand):
-    help = 'Parses the latest news from kun.uz and saves them to the database'
 
     def handle(self, *args, **kwargs):
         url = "https://kun.uz/news/list"
@@ -44,7 +42,7 @@ class Command(BaseCommand):
                     article_text = ""
                     if content_div:
                         paragraphs = content_div.find_all("p")
-                        article_text = "<br>".join([p.get_text(strip=True) for p in paragraphs])
+                        article_text = "\n".join([p.get_text(strip=True) for p in paragraphs])  # Замените <br> на \n
 
                     news = News(
                         title=title,
