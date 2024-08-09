@@ -16,13 +16,17 @@
     ```bash
     python manage.py migrate
     ```
-
-4. Запустите сервер:
+5. Запустите парсер:
+    ```bash
+    python manage.py parse_news
+    ```
+5. Запустите сервер:
     ```bash
     python manage.py runserver
     ```
 
 ## Команды бота
-
+1.Запустите бота
+bot.py run main
 - `/start`: Приветственное сообщение
 - `/latest`: Получить последние новости
